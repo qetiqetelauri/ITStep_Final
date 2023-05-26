@@ -1,0 +1,161 @@
+body{
+    margin: 0px;
+    font-family: "Malgun Gothic";
+}
+
+section{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.fig_3{
+    float: left;
+    width: 260px;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+.fig_3>img{
+    width: 260px;
+    height: 323px;
+    border-radius: 20px;
+    float: left;
+}
+
+.fig_3>div{
+    float: right;
+    line-height: 28px;
+    color: #5B5B5B;
+}
+
+.fig_3>div>div{
+    height: 210px;
+}
+
+.fig_3>div>figcaption{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+svg, footer>img{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+br{
+    display: none;
+}
+
+button{
+    width: 90px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: #7B61FF;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 1s ease;
+}
+
+button:hover{
+    background-color: rgba(123, 97, 255, 0.5);
+    transition: all 1s ease;
+}
+
+button>a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+nav{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav>button{
+    display: none;
+    margin-bottom: -30px;
+    margin-top: 17px;
+}
+
+a{
+    width: 8.3%;
+    padding: 10px 0px;
+    margin: 0px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    color: #7B61FF;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+a:hover{
+    border: 1px solid #7B61FF;
+    transition: all 0.5s ease;
+}
+
+#slide, #slide>a{
+    display: none;
+}
+
+
+@media screen and (max-width: 1075px){
+    nav>a{
+        margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width:1035px){
+    section{
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 950px){
+    nav>a{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 775px){
+    nav>a{
+        margin: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 713px){
+    nav>a{
+        display: none;
+    }
+
+    nav>button{
+        display: block;
+    }
+
+    #slide{
+        width: 100%;
+        height: 377px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-top: 70px;
+        justify-items: center;
+        position: absolute;
+    }
+    
+    #slide>a{
+        color: white;
+        text-align: center;
+        border: none;
+        width: 100%;
+        padding: 16px 0px;
+        margin: 0px;
+    }
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>2rism</title>
+</head>
+<body>
+    <div id="slide">
+        <a href="">Home</a>
+        <a href="" onclick="funcOpen(0)">Hotels</a>
+        <a href="" onclick="funcOpen(1)">Restaurants</a>
+        <a href="Trips.html">Tours</a>
+        <a href="">Destinations</a>
+        <a href="Activities.html">Activities</a>
+        <a href="">Contact</a>
+    </div>
+    <header>
+        <img src="images/logo1.png" alt="" class="logo">
+        <button id="btn_nav" onclick="ShowHide()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: white; margin-left: 0px;" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <nav>
+            <a href="" style="color: white;">Home</a>
+            <a href="" onclick="funcOpen(0)">Hotels</a>
+            <a href="" onclick="funcOpen(1)">Restaurants</a>
+            <a href="Trips.html">Tours</a>
+            <a href="">Destinations</a>
+            <a href="Activities.html">Activities</a>
+            <a href="">Contact</a>
+            <div id="User"></div>
+        </nav>
+        <div>
+            <h1>Discover the most engaging places</h1>            
+            <button style="padding-top: 2px;" id="btn_1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" style="float: left; margin-top: -3px;" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                </svg>
+                <b>Discover on 3D Globe</b>
+            </button>
+
+            <div id="search">
+                <svg xmlns="http://www.w3.org/2000/svg"width="25" height="25" style="float: left; margin-left: 10px; margin-top: 15px; color: #FFA800;" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                    <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"/>
+                    <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"/>
+                </svg>
+                <select>
+                    <option value="hotel">hotel</option>
+                    <option value="restaurant">restaurant</option>
+                    <option value="">both</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" style="float: left; margin-top: 15px; margin-right: 10px; color: #FFA800;" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                <input type="text" placeholder="Type country or city" value="">
+                <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFA800/cycling-mountain-bike.png" alt="" style="float: left; margin-top: 15px;" fill="currentColor"/>
+                <select id="lastSelect">
+                    <option value="">Any</option>
+                    <option value="Sailing">Sailing</option>
+                    <option value="Climbing">Climbing</option>
+                    <option value="Skiing">Skiing</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Skateboarding">Skateboarding</option>
+                    <option value="Snowboarding">Snowboarding</option>
+                    <option value="Roller-skating">Roller-skating</option>
+                    <option value="Mountain biking">Mountain biking</option>
+                    <option value="Wingsuit surfing">Wingsuit surfing</option>
+                    <option value="Bungee jumping">Bungee jumping</option>
+                    <option value="Ice climbing">Ice climbing</option>
+                    <option value="Diving">Diving</option>
+                    <option value="Paragliding">Paragliding</option>
+                    <option value="Rafting">Rafting</option>
+                    <option value="Surfing">Surfing</option>
+                    <option value="Snowmobile Racing">Snowmobile Racing</option>
+                </select>
+                <button onclick="filter()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" style="color: white" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </header>
+
+    <h2>Popular Destinations</h2>
+
+    <section id="section_1">
+        <div>
+            <figure class="fig_1">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT9AOgFsOWz2_Nr4a_AKzevmwS2oz7qWWgi0SDqnVv19P5heOcP" alt="">
+                <figcaption>Big Sur</figcaption>
+                <footer>California, USA</footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_1">
+                <img src="https://www.swisslife.ch/content/internet/ch/en/private/blog/auszeit-vom-job/jcr:content/moodimagearticle/image.1554993055151.transform/16_9_1240w/bild_sabbatical.jpg" alt="">
+                <figcaption>Prescott</figcaption>
+                <footer>Arizona, USA</footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_1">
+                <img src="https://www.floridavacationhomes.com/wp-content/uploads/2019/12/Space-Coast-Vacation-1.jpg" alt="">
+                <figcaption>Fort Mayers</figcaption>
+                <footer>Florida, USA</footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_1">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRvuqSpFTwC7wuTqRuE_nfc3YP8GTJ7wLUtL1LlF6i9lcl6KsET" alt="">
+                <figcaption>Tucson</figcaption>
+                <footer>Arizona, USA</footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_1">
+                <img src="https://static.wixstatic.com/media/nsplsh_9a5794ba9bea4a2c90d49644e138d720~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_9a5794ba9bea4a2c90d49644e138d720~mv2.jpg" alt="">
+                <figcaption>St. Joseph</figcaption>
+                <footer>Michigan, USA</footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_1">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTEzlxZB-3xe8LT2sOzu1nWtDe0YOr-9DqMamhgrpsguepvjmNL" alt="">
+                <figcaption>Madrid</figcaption>
+                <footer>Spain</footer>
+            </figure>
+        </div>
+    </section>
+
+    <h2 class="sec_h2">Hotels and Restaurants</h2>
+    <button onclick="func2(0)" id="btn_hotel">
+        View all
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="float: right" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg>
+    </button>
+
+    <section id="section_2">
+        <div>
+            <figure class="fig_2">
+                <img src="images/hotels and restaurants/hotel1.png" alt="">
+                <figcaption>Monastero Santa Rosa Hotel & Spa</figcaption>
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Salerno, Italy<br>
+                    <img src="images/5.png" class="stars" alt="">
+                </footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_2">
+                <img src="images/hotels and restaurants/hotel2.png" alt="">
+                <figcaption>Grand Hotel Tremezzo</figcaption>
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Lake Como, Italy<br>
+                    <img src="images/3.png" class="stars" alt="">
+                </footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_2">
+                <img src="images/hotels and restaurants/hotel3.png" alt="">
+                <figcaption>The Oberoi Udaivilas, Udaipur</figcaption>
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Udaipur, India<br>
+                    <img src="images/4.png" class="stars" alt="">
+                </footer>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="fig_2">
+                <img src="images/hotels and restaurants/hotel4.png" alt="">
+                <figcaption>AKA Beverly Hills</figcaption>
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Los Angeles, United States<br>
+                    <img src="images/3.png" class="stars" alt="">
+                </footer>
+            </figure>
+        </div>
+    </section>
+    
+    <h2 class="sec_h2">Travel Tips and Advices</h2>
+    <button onclick="func2(1)" id="btn_travel">
+        View all
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="float: right" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg>
+    </button>
+
+    <section id="section_3">
+        <figure class="fig_3">
+            <img src="images/trip places/place1.png" alt="">
+            <div>
+                <figcaption style="color: black"><b>East Village Ice Cream Crawl</b></figcaption>
+                We will stop at five different world-class <br>
+                ice cream shops on this 1.5 mile 1.5 hour <br>
+                tour. At each ice cream store we'll <br>
+                explore the story behind the business <br>
+                and see what makes the ice cream <br>
+                unique as you savor every…
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4-week" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+                        <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                    </svg>
+                    Today
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="padding-left: 20px" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                    </svg>
+                    Maria Philips
+                    <img src="https://img.icons8.com/?size=16&id=143&format=png" style="padding-left: 20px" alt="">
+                    2
+                </footer>
+            </div>
+        </figure>
+
+        <figure class="fig_3">
+            <img src="images/trip places/place2.png" alt="">
+            <div>
+                <figcaption style="color: black"><b>Brooklyn Bridge cinematic <br>photo walk</b></figcaption>
+                This experience takes place at the <br>
+                Brooklyn Bridge Park and Brooklyn <br>
+                Bridge, but I’m always open to capture <br>
+                clients at different locations upon <br>
+                request for an additional charge. 
+                <footer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4-week" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+                        <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                    </svg>
+                    Today
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="padding-left: 20px" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                    </svg>
+                    James Calzoni
+                    <img src="https://img.icons8.com/?size=16&id=143&format=png" style="padding-left: 20px" alt="">
+                    17
+                </footer>
+            </div>
+        </figure>
+    </section>
+
+    <h2 class="sec_h2">Activities</h2>
+    <button  onclick="func2(2)" id="btn_active">
+        View all
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="float: right" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg>
+    </button>
+
+    <section id="section_4">
+        <figure class="fig_4">
+            <img src="images/activities/1.png" alt="">
+            <figcaption style="margin-top: 15px;"><b>Sailing</b></figcaption>
+        </figure>
+
+        <figure class="fig_4">
+            <img src="images/activities/2.png" alt="">
+            <figcaption style="margin-top: 15px;"><b>Climbing</b></figcaption>
+        </figure>
+
+        <figure class="fig_4">
+            <img src="images/activities/3.png" alt="">
+            <figcaption style="margin-top: 15px;"><b>Skiing</b></figcaption>
+        </figure>
+
+        <figure class="fig_4">
+            <img src="images/activities/4.png" alt="">
+            <figcaption style="margin-top: 15px;"><b>Hiking</b></figcaption>
+        </figure>
+    </section>
+
+    <section id="section_5">
+        <figure class="fig_5" style="margin-top: 100px;">
+            <img src="images/we.png" alt="">
+            <div style="float: left;">
+                <figcaption>About Us</figcaption>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br>
+                a sapien justo. Nulla facilisis tristique imperdiet. Nullam a placerat <br>
+                odio. Sed in ex augue. Aliquam porta consectetur lorem sit amet <br>
+                ultrices. Class aptent taciti sociosqu ad litora torquent per conubia <br>
+                nostra, per inceptos himenaeos.<br>
+                <button>
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="float: right" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </button>
+            </div>
+        </figure>
+    </section>
+
+    <footer id="footer">
+        <div style="color: #5B5B5B;">
+            <img src="images/logo2.png" alt="" class="logo" style="margin-left: 0px;"><br><br><br>
+            We always make our customers happy by providing <br>
+            as many choises as possible<br><br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-facebook svg" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter svg" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-instagram svg" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+        </div>
+        <div>
+            <h3>About</h3>
+            <ul>
+                <li>About Us</li>
+                <li>Features</li>
+                <li>News</li>
+                <li>Menu</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Company</h3>
+            <ul>
+                <li>Why 2rism</li>
+                <li>Partner With Us</li>
+                <li>FAQ</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li>Account</li>
+                <li>Support Center</li>
+                <li>Feedback</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Subscribe on our destination review newsletters</h3>
+            <span>Your Email</span>
+            <svg id="post" xmlns="http://www.w3.org/2000/svg" width="23" height="23" style="color: #FFA800;" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            </svg>
+            <input type="email" placeholder="johndoe@gmail.com" id="input">
+            <button id="btn_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" style="color: white;" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+            </button>
+        </div>
+    </footer>    
+    <script src="home.js"></script>
+    <script src="UserPage.js"></script>
+</body>
+</html>

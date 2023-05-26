@@ -1,0 +1,106 @@
+div{
+    width: 88vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure{
+    float: left;
+    margin: 20px;
+    justify-content: center;
+}
+
+figcaption{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+button{
+    width: 80px;
+    margin-top: -25px;
+    margin-right: -5px;
+}
+
+nav{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav>button{
+    display: none;
+    margin-bottom: -30px;
+    margin-top: 17px;
+}
+
+a{
+    width: 8.3%;
+    padding: 10px 0px;
+    margin: 0px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid white;
+    color: #7B61FF;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+a:hover{
+    border: 1px solid #7B61FF;
+    transition: all 0.5s ease;
+}
+
+#slide, #slide>a{
+    display: none;
+}
+
+
+@media screen and (max-width: 1075px){
+    nav>a{
+        margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    nav>a{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 775px){
+    nav>a{
+        margin: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 713px){
+    nav>a{
+        display: none;
+    }
+
+    nav>button{
+        display: block;
+    }
+
+    #slide{
+        width: 100%;
+        height: 377px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-top: 70px;
+        justify-items: center;
+        position: absolute;
+    }
+    
+    #slide>a{
+        color: white;
+        text-align: center;
+        border: none;
+        width: 100%;
+        padding: 16px 0px;
+        margin: 0px;
+    }
+}
