@@ -46,7 +46,7 @@
 //     let input2 = $($("input")[1]).val()
 //     let check = false
 
-//     fetch("http://kketelauri-001-site1.gtempurl.com/api/user/login", {
+//     fetch("https://kketelauri-001-site1.gtempurl.com/api/user/login", {
 //         method: 'POST',
 //         // redirect: "error",
 //         headers: {
