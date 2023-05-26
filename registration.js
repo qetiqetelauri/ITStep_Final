@@ -49,6 +49,7 @@
 //     fetch("https://kketelauri-001-site1.gtempurl.com/api/user/login", {
 //         method: 'POST',
 //         // redirect: "error",
+           referrerPolicy: "unsafe_url",
 //         headers: {
 //             'Accept': 'application/json',
 //             'Content-Type': 'application/json'
